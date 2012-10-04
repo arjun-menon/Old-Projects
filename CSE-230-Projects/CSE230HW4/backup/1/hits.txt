@@ -1,0 +1,16 @@
+192.168.1.101 www.cs.sunysb.edu 10/01/2008
+192.168.1.101 www.cs.sunysb.edu 10/01/2008
+123.112.15.151 www.cs.sunysb.edu 10/01/2008
+192.168.1.101 www.espn.com 10/01/2008
+123.112.15.151 www.cs.sunysb.edu 10/04/2008
+123.112.15.151 www.cs.sunysb.edu 10/08/2008
+192.168.1.101 www.espn.com 10/11/2008
+192.168.1.101 www.espn.com 10/1/2008
+192.168.1.101 www.espn.com 10/41/2008
+192.168.1.101 www.cs.sunysb.edu 10/09/2008
+111.176.4.191 www.cs.sunysb.edu 10/03/2008
+111.176.4.191 www.yahoo.com 10/04/2008
+111.176.4.191 www.yahoo.com 10/09/2008
+192.168.1.101 www.yahoo.com 10/04/2008
+111.176.4.191 www.yahoo.com 10/12/2008
+192.168.1.101 www.espn.com 10/05/2008

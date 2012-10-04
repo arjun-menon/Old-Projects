@@ -1,0 +1,226 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><!-- saved from url=(0022)http://internet.e-mail -->
+
+<title>CSE230 Homework 4</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta content="MSHTML 6.00.2900.2523" name="GENERATOR"></head><body bgcolor="#ffffff">
+<h1 align="center"><font color="#800000" face="Arial">CSE230</font></h1>
+<h2 align="center"><font color="#800000" face="Arial"></font><font color="#800800" face="Arial">HOMEWORK - Fall 2008</font></h2>
+<hr>
+
+<h3><font face="Arial"><strong>HOMEWORK 4 - due Tuesday, November 17th no later than 5:00PM</strong></font></h3>
+<!--<H3 align=left>Website Tracking Information Project</H3>-->
+<p><b>For this assignment you will be required to write a program which
+accepts a text file containing information about a series of hits to
+various websites. Your program will then store this information and
+will provide the user with a menu that will look up information about a
+website of his or her choosing.</b></p>
+<p><b>Here is the format for the input file:</b></p><b><i>(IP_Address)</i> <i>(Link_Name)</i> <i>(Date_Accessed)</i></b> 
+
+<ul><b>
+  </b><li><b>IP_Address is the IP Address of the user which does not contain any spaces.
+  </b></li><li><b>Link_Name is the name of a website that does not contain any spaces.
+  </b></li><li><b>Date_Accessed is the date of the hit in mm/dd/yyyy format (Ex: 
+  07/06/2008) 
+  </b></li><li><b>Each hit has its information on its own line in the input file.
+  </b></li><li><b>Entries
+for hits in the data file which contain invalid data (such as an
+invalid date, etc.) should be reported to the user with an error
+message.<br>The entire entry for that hit should then be ignored.
+</b></li></ul><b>Your program should provide a menu with the following items: 
+</b><ul>
+<b>  </b><li><b>1) Report information about hits for a given link in a period of time:
+<br>Asks the user for a link to a website and a starting date and ending date, each in mm/dd/yyyy form
+<br>For the given input, your program must search through the list of
+hits and report the following information about the link by considering
+only the hit entries in the given time period:<br>- the number of total hits (times that the link was listed altogether)<br> - the number of hits by unique visitors (the number of visitors who visited the link, not counting duplicate visits)<br>- the number of hits by returning visitors (number of visits beyond the first by visitors)
+<br><font color="black"><i>NOTE: The sum of the unique visitor hits and
+repeating visitor hits should equal the total hits. Thus, it is not
+necessary to search the list a third time for the returning visitor
+hits if you already know the total hits and unique visitor hits.</i></font><br>If
+the user inputs any invalid information (non-existent date, start date
+comes after end date, or a link that was not in the input file) an
+error message should be displayed and you should then prompt the user
+to re-enter the data.
+</b></li><li><b>2) Print the input information from the text file based upon number of unique visitors to each website (in increasing order)
+</b></li><li><b>3) Quit the program
+</b></li><li><b><font color="red">Optional Extra Credit:</font> Include
+an additional menu option which prompts the user for a link and creates
+a bar chart for the past twelve months of hits in each month. Each
+month must fit on one page, so if there are too many hits for a given
+month you must change the number of hits each star represents.
+</b></li></ul><b></b>
+<b>Your program should also follow the following requirements: 
+</b><ul>
+<b>  </b><li><b>You must prompt the user for the name of the input file, which the user 
+  will then enter by using the keyboard 
+  </b></li><li><b>Your program <u>must</u> be written in C++ to receive any credit.
+  </b></li><li><b>You <u>must</u> use at least one class in addition to the main program
+  </b></li><li><b>Your output should be printed in a neatly formatted table (see SAMPLE 
+  OUTPUT below) 
+  </b></li><li><b>You may use any sorting algorithm you wish to perform the sorting 
+  operation, including any algorithms listed in textbooks.
+  </b></li><li><b>If there is an error reading from the file or if any input data is invalid 
+  you should inform the user of the situation.<br>In the event that the input 
+  data is invalid, you must ingore the record and print along with your error 
+  message the name of the owner of the invalid account. 
+  </b></li><li><b>Your program should make good use of functions and be well commented  
+  </b></li><li><b>You must include a "makefile" which correctly compiles your multiple 
+  source files</b></li></ul><b></b>
+<p align="left"><u><strong>SAMPLE INPUT AND OUTPUT</strong></u></p>Note that the 
+input file is in black, commnets are in <font color="green">green</font> and the output follows in <font color="blue">blue</font>: <pre><font color="green">//Sample input file (hits.txt):</font>
+192.168.1.101 www.cs.sunysb.edu 10/01/2008
+192.168.1.101 www.cs.sunysb.edu 10/01/2008
+123.112.15.151 www.cs.sunysb.edu 10/01/2008
+192.168.1.101 www.espn.com 10/01/2008
+123.112.15.151 www.cs.sunysb.edu 10/04/2008
+123.112.15.151 www.cs.sunysb.edu 10/08/2008
+192.168.1.101 www.espn.com 10/11/2008
+192.168.1.101 www.espn.com 10/1/2008 		<font color="green">//Error in date format</font>
+192.168.1.101 www.espn.com 10/41/2008 		<font color="green">//Error in date </font>
+192.168.1.101 www.cs.sunysb.edu 10/09/2008
+111.176.4.191 www.cs.sunysb.edu 10/03/2008
+111.176.4.191 www.yahoo.com 10/04/2008
+111.176.4.191 www.yahoo.com 10/09/2008
+192.168.1.101 www.yahoo.com 10/04/2008
+111.176.4.191 www.yahoo.com 10/12/2008
+192.168.1.101 www.espn.com 10/05/2008
+
+<font color="green">//Running the programming</font>
+<font color="blue">Enter the name of a file to load: </font>hits.txt
+<font color="blue">Loading hits.txt...</font>
+
+<font color="blue">Found a record with an invalid date format (not mm/dd/yyyy)... ignoring entry</font>
+<font color="blue">Found a record with an invalid date ... ignoring entry</font>
+
+
+<font color="blue">Please select a menu option: </font>
+<font color="blue">1)Link Information in date range</font>
+<font color="blue">2)Information about all links</font>
+<font color="blue">3)Quit the program</font>
+<font color="blue">Option (1,2,3): </font>1
+
+<font color="blue">Enter a link name: </font>www.espn.com
+<font color="blue">Enter a start date: </font>10/01/2008
+<font color="blue">Enter a finish date: </font>10/09/2008
+
+<font color="blue">Link: www.espn.com</font>
+<font color="blue">Total hits:	2</font>
+<font color="blue">Unique: 	1</font>
+<font color="blue">Returning: 	1</font>
+
+<font color="blue">Please select a menu option: </font>
+<font color="blue">1)Link Information in date range</font>
+<font color="blue">2)Information about all links</font>
+<font color="blue">3)Quit the program</font>
+<font color="blue">Option (1,2,3): </font>1
+
+<font color="blue">Enter a link name: </font>www.espn.com
+<font color="blue">Enter a start date: </font>10/01/2008
+<font color="blue">Enter a finish date: </font>10/19/2008
+
+<font color="blue">Link: www.espn.com</font>
+<font color="blue">Total hits:	3</font>
+<font color="blue">Unique: 	1</font>
+<font color="blue">Returning: 	2</font>
+
+<font color="blue">Please select a menu option: </font>
+<font color="blue">1)Link Information in date range</font>
+<font color="blue">2)Information about all links</font>
+<font color="blue">3)Quit the program</font>
+<font color="blue">Option (1,2,3): </font>1
+
+<font color="blue">Enter a link name: </font>www.cs.sunysb.edu
+<font color="blue">Enter a start date: </font>10/01/2008
+<font color="blue">Enter a finish date: </font>10/29/2008
+
+<font color="blue">Link: www.cs.sunysb.edu</font>
+<font color="blue">Total hits:	7</font>
+<font color="blue">Unique: 	3</font>
+<font color="blue">Returning: 	4</font>
+
+<font color="blue">Please select a menu option: </font>
+<font color="blue">1)Link Information in date range</font>
+<font color="blue">2)Information about all links</font>
+<font color="blue">3)Quit the program</font>
+<font color="blue">Option (1,2,3): </font>1
+
+<font color="blue">Enter a link name: </font>www.espn.com
+<font color="blue">Enter a start date: </font>10/1/2008
+<font color="blue">Enter a finish date: </font>10/09/2008
+<font color="blue">Invalid date format... please re-enter information</font>
+<font color="blue">Enter a start date: </font>10/11/2008
+<font color="blue">Enter a finish date: </font>10/09/2008
+<font color="blue">Dates out of order... please re-enter information</font>
+<font color="blue">Enter a start date: </font>10/01/2008
+<font color="blue">Enter a finish date: </font>10/09/2008
+
+<font color="blue">Link: www.espn.com</font>
+<font color="blue">Total hits:	2</font>
+<font color="blue">Unique: 	1</font>
+<font color="blue">Returning: 	1</font>
+
+<font color="blue">Please select a menu option: </font>
+<font color="blue">1)Link Information in date range</font>
+<font color="blue">2)Information about all links</font>
+<font color="blue">3)Quit the program</font>
+<font color="blue">Option (1,2,3): </font>2
+<font color="blue">
+     Link Name		Unique Visits	Return Visits	Total Visits
+--------------------	-------------	-------------	------------
+www.espn.com		      1               2              3
+www.yahoo.com		      2               2              4
+www.cs.sunysb.edu	      3               4              7
+</font>
+<font color="blue">Please select a menu option: </font>
+<font color="blue">1)Link Information in date range</font>
+<font color="blue">2)Information about all links</font>
+<font color="blue">3)Quit the program</font>
+<font color="blue">Option (1,2,3): </font>3
+
+<font color="blue">Program terminating normally...</font>
+
+<font color="green">//Example of a bar chart, for extra credit, for www.espn.com</font>
+<font color="green">//Assume that the last time this link was accessed was in December 2008 and <br>has the following distribution of hits:</font>
+<font color="green">//Jan: 0, Feb: 2, Mar: 3, Apr: 6, May: 12, Jun: 11,
+//Jul: 10, Aug: 10, Sep: 8, Oct: 5, Nov: 3, Dec: 1</font>
+
+<font color="blue">Bar chart for www.espn.com:
+ 1/08: 
+ 2/08: **
+ 3/08: ***
+ 4/08: ******
+ 5/08: ************
+ 6/08: ***********
+ 7/08: **********
+ 8/08: **********
+ 9/08: ********
+10/08: *****
+11/08: ***
+12/08: *</font>
+
+</pre>
+<p align="left"><u><strong>GRADING KEY</strong></u></p><b>
+</b><ul>
+<b>  </b><li><b>(5 pts): Proper use of Comments 
+  </b></li><li><b>(5 pts): Good use of Functions 
+  </b></li><li><b>(20 pts): Use of at least one additional class
+  </b></li><li><b>(5 pts): Inclusion of a makefile 
+  </b></li><li><b>(5 pts): Input file is read correctly from keyboard 
+  </b></li><li><b>(10 pts): Error message displayed when a problem reading information from a 
+  file has been encountered or invalid user information is entered
+  </b></li><li><b>(5 pts): Program compiles without error 
+  </b></li><li><b>(20 pts): The program correctly prints all hit information in a date range for a given link
+  </b></li><li><b>(20 pts): The information for each link is printed in increasing order of unique hits.
+  </b></li><li><b>(5 pts): Information is printed in a neatly formatted table  </b></li>
+<b>  </b><li><b><font color="red">(25 pts, Extra Credit):</font>The program correctly prints a bar chart for the hits of a given link in the last 12 months.</b></li></ul><b></b>
+
+<p align="left"><u><strong>SUBMISSION INFO</strong></u></p>
+<b>All required files for submission including makefile (or a zip file
+containing them) must be emailed to Lei Wang (leiwang1@cs.sunysb.edu)
+before the deadline.
+</b>
+<hr>
+
+
+</body></html>

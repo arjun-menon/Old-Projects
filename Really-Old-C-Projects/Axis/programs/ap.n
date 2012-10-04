@@ -1,0 +1,29 @@
+# A.P. Program
+# Using Axis
+
+println nl,"Arithmetic Progression"
+a, d, n = 0, 0, 0
+println nl,"Enter starting value"
+input a
+println nl,"Enter difference"
+input d
+println nl,"How many terms"
+input n
+newline
+
+i, t = 0, 0
+sum = 0
+println "Terms of AP ...", nl
+formula:
+t = a+i*d
+sum += t
+i += 1
+println t
+if(i>=n)
+> finish
+goto formula
+finish:
+newline
+write Sum of terms:
+print(sum,nl)
+pause

@@ -1,0 +1,3 @@
+print "k",nl
+write Hello World!
+pause

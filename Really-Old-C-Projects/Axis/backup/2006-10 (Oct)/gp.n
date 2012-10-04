@@ -1,0 +1,27 @@
+# G.P. Program
+# Using Axis
+
+print nl, "Geometric Progression", nl
+a, r, n = 0, 0, 0
+print nl, "Enter starting value", nl
+input a
+print nl, "Enter rate", nl
+input r
+print nl, "How many terms",nl
+input n
+
+i, t = 0, 0
+sum = 0
+formula:
+t = a*r**i
+sum += t
+i += 1
+print(t)
+if(i>=n)
+> finish
+goto formula
+finish:
+newline
+write Sum of terms:
+print(sum)
+pause

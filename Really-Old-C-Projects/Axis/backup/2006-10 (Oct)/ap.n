@@ -1,0 +1,31 @@
+# A.P. Program
+# Using Axis
+
+write Arithmetic Progression
+newline
+a, d, n = 0, 0, 0
+write Enter starting value
+input a
+newline
+write Enter difference
+input d
+newline
+write How many terms
+input n
+newline
+
+i, t = 0, 0
+sum = 0
+formula:
+t = a+i*d
+sum += t
+i += 1
+print(t)
+if(i>=n)
+> finish
+goto formula
+finish:
+newline
+write Sum of terms:
+print(sum)
+pause

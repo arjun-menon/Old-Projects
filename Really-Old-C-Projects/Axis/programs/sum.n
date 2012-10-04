@@ -1,0 +1,16 @@
+i, j, sum = 0, 0, 0
+println nl,"Sum till how many numbers..."
+input j
+newline
+add:
+i += 1
+if(i>j)
+goto finish
+println i
+sum += i
+goto add
+finish:
+newline
+write Sum of the numbers:
+println(sum)
+pause

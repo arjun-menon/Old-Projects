@@ -1,0 +1,46 @@
+“Notes”
+
+use longer names for funcs like eval_expr, run_line, exec_line
+use special functions to extract integers from strings like 'a',45,..
+similarly other funcs for doubles, strings, e.t.c.
+add some funcs that convert double to int, e.t.c. properly.
+
+lex: you dont need the second int args, just return the list
+in such a way that its terminated by a NULL string to denote
+the end of the list. (from which its aize can be computed).
+
+goto denotion:
+use ! symbol instead of ':' for goto flagpoints.
+Call them turning points. It should be possible to
+call them directly without unsing the keyword 'goto'
+
+-print @ 68 char/line
+15 Aug 2006:
+Split up the lex_expr function int o 3 or 4 functions.
+There should be a lex_list for "sd,ddaf,da" to "sd","ddaf",..
+a lex_cmd for "dss goo fa" to "dss",goo","fa" and
+a lex_func for "foo(para)trr" to "foo", "para" & "trr"
+split up the runs & exec too. the assignment splitting
+should be tranplanted in an lex_asgn function.
+
+Don't forget about the escape characters.
+Fix the execution routine, eval is called too early.
+Also split eval to 2 pieces. Before eval, replace
+the string with $5234 kind of references because it
+might simplify & speed up math evaluation.
+
+21 Sep 2006:
+There should be a COMMON function for infix to
+postfix translation & that algorithm for 
+translation should also be changed.
+Try to handle both unary & binary expressions.
+The postfix expressio should be stored in a LIST
+( char** ) variable in the foll. manner...
+for operands:
+"the operand whatsoever"
+for operators:
+NULL,'operator as a single byte character'
+for endinf the expression:
+NULL,NULL
+
+http://download.windowsvista.com/preview/prerc1/en/x86/iso/vista_5536.16385.060821-1900_vista_rc1_x86fre_client-lr1cfre_en_dvd.isoading, it makes the program confusing.

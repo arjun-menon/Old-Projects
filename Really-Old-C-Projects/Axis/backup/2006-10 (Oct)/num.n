@@ -1,0 +1,12 @@
+i, j = 0, 0
+newline
+write Show till how many numbers...
+input j
+add:
+i += 1
+if(i>j)
+goto finish
+print i
+goto add
+finish:
+pause

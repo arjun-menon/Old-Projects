@@ -1,0 +1,12 @@
+i, j = 0, 0
+println nl,"Show till how many numbers..."
+input j
+newline
+add:
+i += 1
+if(i>j)
+goto finish
+println i
+goto add
+finish:
+pause

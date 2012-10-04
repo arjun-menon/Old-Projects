@@ -1,0 +1,17 @@
+newline
+write Show till how many numbers...
+j = 0
+input j
+i, sum = 0, 0
+add:
+i += 1
+if(i>j)
+goto finish
+print i
+sum += i
+goto add
+finish:
+newline
+write Sum of the numbers:
+print(sum)
+pause

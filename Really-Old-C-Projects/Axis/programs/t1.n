@@ -1,0 +1,18 @@
+x, k = 0, 0
+print "String: "
+read x
+print nl, "Addent..."
+input k
+newline
+
+i = 0
+opcode:
+x[i] += k
+i += 1
+if(i<x[])
+goto opcode
+
+printr $x
+file t.txt
+store $x
+release

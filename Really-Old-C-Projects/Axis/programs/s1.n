@@ -1,0 +1,17 @@
+scan s.txt,x
+
+i, k = 0, 0
+println "Addent..."
+input k
+newline
+println "Original ", $x
+opcode:
+x[i] += k
+i += 1
+if(i<x[])
+goto opcode
+
+println "Final: ", $x
+file o.txt
+store $x
+release

@@ -1,0 +1,67 @@
+# An interactive prime number generation program
+# Written using Axis by Arjun Menon
+
+println nl, "Show how many prime numbers..."
+
+n = 0
+input n
+if(n<=2)
+  > special_cases
+
+newline
+x, sum = 0, 0
+# start making prime numbers...
+i = 2
+begin:
+  j = 2
+  check:
+  if(i%j==0)
+    > no
+  j += 1
+  if(j<i)
+    > check
+println i
+sum += i
+count += 1
+no:
+i += 1
+if(i<n)
+  > begin
+
+finished:
+println nl, "Sum of primes numbers = ", sum
+pause
+quit
+
+# these are unique cases...
+
+special_cases:
+no_negative = "Don't give me zero or negative numbers!"
+one = "One is neither prime nor composite!"
+two = "Two is the only even prime number."
+
+if(n<0)
+  > it_is_negative
+
+if(n==1)
+  > it_is_one
+
+if(n==2)
+  > it_is_two
+
+# here we have some pseudo functions for each case...
+
+it_is_negative:
+  println nl, $no_negative
+  pause
+  quit
+
+it_is_one:
+  println nl, $one
+  pause
+  quit
+
+it_is_two:
+  println nl, $two
+  pause
+  quit

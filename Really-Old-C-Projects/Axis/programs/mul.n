@@ -1,0 +1,10 @@
+x,y = 0,0
+newline
+write Enter 2 numbers
+input x
+input y
+z = x*y
+newline
+write Product of numbers
+println(z)
+pause

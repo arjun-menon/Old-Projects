@@ -64,16 +64,16 @@ There is a lot more to inner working of the algorithms, such as how exactly merg
 
 The following diagram (from Guy Flysher and Amir Rubinshtein's version of the GHS paper) illustrates the fragment *absorption* and *merge* processes:
 
-![Diagram showing fragment mergers and absorptions](https://raw.github.com/arjungmenon/Distributed-Graph-Algorithms/master/Minimum-Spanning-Tree/img/MST-figure.png)
+![Diagram showing fragment mergers and absorptions](https://raw.github.com/arjungmenon/Old-Projects/master/Distributed-Graph-Algorithms/Minimum-Spanning-Tree/img/MST-figure.png)
 
 ### Pseudocode
 The pseudocode for GHS provided in the paper is quite low-level. I [tried](https://github.com/arjungmenon/Distributed-Graph-Algorithms/blob/master/Minimum-Spanning-Tree/old/mst_attempt_2.dis), but wasn't able to directly translate it to DistAlgo. The main problem I ran into it was that, DistAlgo does not provide a way (or I don't know of a way) to manipulate the local message queue directly. The pseudocode uses that ability to "delay" processing a message, by putting it back in the end of the queue. My implementation differs in this aspect and also other aspects that make it more high-level and easier to understand (but less efficient.)
 
 I largely followed the pseudocode as a guide, rather than following it directly. For my implementation I tried, to the maximal extent possible, to *work out the lower level details myself, while simply following the high-level details* of the algirithm as described and shown in the diagram above. The benefit of following the high-level explanation was that, I was able to keep the *big picture* in my head (all at once.) I found that impossible to do with the pseudocode (or with the low-level description, which contains a lot of minute details that are intricately connected with each other.) I found I was able to understand part of it at a time, but to hold the whole thing in my head at once was impossible.
 
-The following is an image of the pseudocode for GHS extracted from [Guy Flysher and Amir Rubinshtein](https://raw.github.com/arjungmenon/Distributed-Graph-Algorithms/master/Minimum-Spanning-Tree/papers/GHS_enhanced.pdf)'s version of the paper:
+The following is an image of the pseudocode for GHS extracted from [Guy Flysher and Amir Rubinshtein](https://raw.github.com/arjungmenon/Old-Projects/master/Distributed-Graph-Algorithms/Minimum-Spanning-Tree/papers/GHS_enhanced.pdf)'s version of the paper:
 
-![Distributed MST by Gallager, Humblet & Spira](https://raw.github.com/arjungmenon/Distributed-Graph-Algorithms/master/Minimum-Spanning-Tree/img/MST_algorithm.png)
+![Distributed MST by Gallager, Humblet & Spira](https://raw.github.com/arjungmenon/Old-Projects/master/Distributed-Graph-Algorithms/Minimum-Spanning-Tree/img/MST_algorithm.png)
 
 Implementation
 --------------
@@ -198,7 +198,7 @@ For my initial test case which I used for much of the developed of my algorithm,
 
 The following `matplotlib` diagram was generated representing the solution to `graph-1`:
 
-![Test Case 1](https://raw.github.com/arjungmenon/Distributed-Graph-Algorithms/master/Minimum-Spanning-Tree/img/test_case_1.png)
+![Test Case 1](https://raw.github.com/arjungmenon/Old-Projects/master/Distributed-Graph-Algorithms/Minimum-Spanning-Tree/img/test_case_1.png)
 
 The thick blue edges denote the branches of the MST (Minimum Spanning Tree).
 
@@ -219,7 +219,7 @@ I added three more nodes: `L`, `K` and `M` to the previous graph for increased c
 
 The solution to `graph-2` is depicted below:
 
-![Test Case 2](https://raw.github.com/arjungmenon/Distributed-Graph-Algorithms/master/Minimum-Spanning-Tree/img/test_case_2.png)
+![Test Case 2](https://raw.github.com/arjungmenon/Old-Projects/master/Distributed-Graph-Algorithms/Minimum-Spanning-Tree/img/test_case_2.png)
 
 As always, *the thick blue edges* denote the **branches** of the MST.
 
@@ -227,21 +227,21 @@ As always, *the thick blue edges* denote the **branches** of the MST.
 
 This is a much more complex test case than the previous ones. I drew a sketch of it on paper:
 
-![Graph 3 Sketch](https://raw.github.com/arjungmenon/Distributed-Graph-Algorithms/master/Minimum-Spanning-Tree/img/graph-3-sketch.png)
+![Graph 3 Sketch](https://raw.github.com/arjungmenon/Old-Projects/master/Distributed-Graph-Algorithms/Minimum-Spanning-Tree/img/graph-3-sketch.png)
 
 The edge list for it can be found in the file `graph-3`. The output produced by `MST.dis` and `Kruskal.py` can be found in `graph-3-ouptput.txt` (in this directory.)
 
 While writing the graph file `graph-3`, I ran the MST solver several times and obtained these intermediate results:
 
 #### Intermediate Result 1
-![Graph 3 Intermediate Result 1](https://raw.github.com/arjungmenon/Distributed-Graph-Algorithms/master/Minimum-Spanning-Tree/img/graph-3-segment1sol.png)
+![Graph 3 Intermediate Result 1](https://raw.github.com/arjungmenon/Old-Projects/master/Distributed-Graph-Algorithms/Minimum-Spanning-Tree/img/graph-3-segment1sol.png)
 
 #### Intermediate Result 2
-![Graph 3 Intermediate Result 1](https://raw.github.com/arjungmenon/Distributed-Graph-Algorithms/master/Minimum-Spanning-Tree/img/graph-3-segment2sol.png)
+![Graph 3 Intermediate Result 1](https://raw.github.com/arjungmenon/Old-Projects/master/Distributed-Graph-Algorithms/Minimum-Spanning-Tree/img/graph-3-segment2sol.png)
 
 #### Final Solution
 Click to enlarge:
-![Graph 3 Final Solution](https://raw.github.com/arjungmenon/Distributed-Graph-Algorithms/master/Minimum-Spanning-Tree/img/graph-3-sol.png)
+![Graph 3 Final Solution](https://raw.github.com/arjungmenon/Old-Projects/master/Distributed-Graph-Algorithms/Minimum-Spanning-Tree/img/graph-3-sol.png)
 
 Once again, the _blue edges_ denote the MST.
 
@@ -251,7 +251,7 @@ This third test case _tests merges between ***Level-2*** fragments_. The final f
 
 This random graph was generated using the random graph generator (`random_graph.py`) in the parent directory. A copy of the random graph used for this test case is in the file `1000edge-100node-graph` in this directory. The solution diagram, while not helpful per-se, is still shown below:
 
-![Graph 3 Final Solution](https://raw.github.com/arjungmenon/Distributed-Graph-Algorithms/master/Minimum-Spanning-Tree/img/1000edge-100node-graph.png)
+![Graph 3 Final Solution](https://raw.github.com/arjungmenon/Old-Projects/master/Distributed-Graph-Algorithms/Minimum-Spanning-Tree/img/1000edge-100node-graph.png)
 
 The output generated by the distributed MST while solving this problem is enclosed in the file `1000edge-100node-graph-output.txt`.
 

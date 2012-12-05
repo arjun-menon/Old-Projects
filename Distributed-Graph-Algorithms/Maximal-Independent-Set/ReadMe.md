@@ -32,7 +32,7 @@ Description of the Algorithm
 
 The design of my algorithm largely follows the fundamental idea underpinning the sequential algorithm. The sequential algorithm (taken from these [Luby's algorithm lecture notes](http://www.cc.gatech.edu/~vigoda/RandAlgs/MIS.pdf)) for finding MST is shown below:
 
-![MIS Sequential](https://raw.github.com/arjungmenon/Distributed-Graph-Algorithms/master/Maximal-Independent-Set/MIS-sequential.png)
+![MIS Sequential](https://raw.github.com/arjungmenon/Old-Projects/master/Distributed-Graph-Algorithms/Maximal-Independent-Set/MIS-sequential.png)
 
 The core steps in my algorithm are as follows:
 
@@ -193,7 +193,7 @@ These were some of the outputs produced during some trial runs of the algorithm 
 
 I re-used `graph-1` that I used for testing MST here. The following diagram depicts it (generated using _NetworkX_ and _matplotlib_):
 
-![Test Case 1](https://raw.github.com/arjungmenon/Distributed-Graph-Algorithms/master/Maximal-Independent-Set/graph-1.png)
+![Test Case 1](https://raw.github.com/arjungmenon/Old-Projects/master/Distributed-Graph-Algorithms/Maximal-Independent-Set/graph-1.png)
 
 #### Run 1 (Solution: A, C, J, E)
 
@@ -351,7 +351,7 @@ I re-used `graph-1` that I used for testing MST here. The following diagram depi
 
 Here I re-used `graph-2` from MST. This diagram depicts it (generated using _NetworkX_ and _matplotlib_):
 
-![Test Case 2](https://raw.github.com/arjungmenon/Distributed-Graph-Algorithms/master/Maximal-Independent-Set/graph-2c.png)
+![Test Case 2](https://raw.github.com/arjungmenon/Old-Projects/master/Distributed-Graph-Algorithms/Maximal-Independent-Set/graph-2c.png)
 
 #### Run 1 (Solution: A, J, L, G, D)
 

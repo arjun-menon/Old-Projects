@@ -52,7 +52,7 @@ In each run, differences can be seen in the "shortest" paths found priot to the 
 
 I used the `graph-1` from MST to test Shortest Path. This is a diagram of that graph, generated using _NetworkX_ and _matplotlib_:
 
-![Test Case 1](https://raw.github.com/arjungmenon/Distributed-Graph-Algorithms/master/Maximal-Independent-Set/graph-1.png)
+![Test Case 1](https://raw.github.com/arjungmenon/Old-Projects/master/Distributed-Graph-Algorithms/Maximal-Independent-Set/graph-1.png)
 
  The following runs are all for the shortest path from `G` to `C`:
 
@@ -96,7 +96,7 @@ I used the `graph-1` from MST to test Shortest Path. This is a diagram of that g
 
 Here I used `graph-2` which has also been used to test both MST and MIS. Here is a diagram of that graph, generated using _NetworkX_ and _matplotlib_:
 
-![Test Case 2](https://raw.github.com/arjungmenon/Distributed-Graph-Algorithms/master/Maximal-Independent-Set/graph-2b.png)
+![Test Case 2](https://raw.github.com/arjungmenon/Old-Projects/master/Distributed-Graph-Algorithms/Maximal-Independent-Set/graph-2b.png)
 
 Here multiple runs have been made with non-default different start and end nodes.
 

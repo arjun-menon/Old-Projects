@@ -89,7 +89,7 @@ void StartUI(LinearFileReader &obj)
 		{
 		case 'N':
 		case 'P':
-			system("cls");
+			system("clear");
 			cout<<obj.DisplayFormattedLines(input);
 			cout<<"\nPlease enter N to view next page, P for previous page and Q to quit: ";
 			break;

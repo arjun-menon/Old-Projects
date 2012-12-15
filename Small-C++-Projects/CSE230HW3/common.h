@@ -18,6 +18,7 @@
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
+#include <cstring>
 #include <cstdio>
 #include <string>
 #include <cctype>

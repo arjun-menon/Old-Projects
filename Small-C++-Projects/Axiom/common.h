@@ -25,6 +25,7 @@
 #include <utility>
 
 // C Library
+#include <cstdlib>
 #include <cmath>
 
 // Namespace Usage

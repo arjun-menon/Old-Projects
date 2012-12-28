@@ -2320,7 +2320,7 @@ void operation_print(char *str, char newline)
 			show_dbl_list(&glob_dbl_list, stdout);
 		else if(*segment[i] == '\"') {
 			trim(segment[i],'\"');
-			printf(segment[i]);
+			printf("%s", segment[i]);
 		}
 		else if(*segment[i] == '$') {
 			show_dbl_str((segment[i]+1), &glob_dbl_list, stdout);

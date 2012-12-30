@@ -29,6 +29,9 @@ The widely-known library [matplotlib](http://matplotlib.org/) is being used here
 
 The file `tools.py` used by the MST solver does stuff like building the NetworkX graph, visualizing it with matplotlib, etc.
 
+Other
+-----
+
 ### Random Graph Generator
 
 In addition, I wrote a simple random graph generator (contained in `graph_gen.py`) that builds a weighted undirected graph with a user-selected number of ranom randomly-weighed edges between the nodes. It can be executed independently as a script (in addition to being imported and used as a library) as shown below:
@@ -51,7 +54,7 @@ In addition, I wrote a simple random graph generator (contained in `graph_gen.py
                                 The number of edges in the graph.
 
 
-## Token-based Distributed Mutex Algorithms
+### Token-based Distributed Mutex Algorithms
 
 [Ricart-Agrawala's and Suzuki-Kasami's token-based distributed mutex algorithms](https://github.com/arjungmenon/Distributed-Graph-Algorithms/tree/master/DistributedMutex) have also been been implemented in DistAlgo-0.2. In addition, [Lamport's fast mutual exclusion and bakery algorithms](https://github.com/arjungmenon/Distributed-Graph-Algorithms/tree/master/ConcurrentMutex) have been implemented using the built-in Python library ``threading``.
 

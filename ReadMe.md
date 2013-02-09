@@ -1,15 +1,13 @@
 Old Projects
 ============
-Here is an archive of projects I've worked on in the past and am no longer actively working on.
+Here is an archive of projects I've worked on in the past and am no longer actively working on. Some of the non-trivial ones here are:
 
-* [Distributed Graph Algorithms](https://github.com/arjungmenon/Old-Projects/tree/master/Distributed-Graph-Algorithms) (2012)
-
-* Interpreters developed in Python for [CSE 307](http://www.cs.sunysb.edu/undergrad/cse_courses/cse307.html) (2009):
-	* [Wolfscheme](https://github.com/arjungmenon/Old-Projects/tree/master/Small-Python-Programs/Wolfscheme), a Scheme-like programming language.
-	* [Wolfscript](https://github.com/arjungmenon/Old-Projects/tree/master/Small-Python-Programs/Wolfscript), a C-like imperative programming language.
+* **Python**
+	* [Distributed Graph Algorithms](https://github.com/arjungmenon/Old-Projects/tree/master/Distributed-Graph-Algorithms) (2012)
+	* [Wolfscript](https://github.com/arjungmenon/Old-Projects/tree/master/Small-Python-Programs/Wolfscript) (2009), an interpreter for a C-like imperative programming language developed in Python for [CSE 307](http://www.cs.sunysb.edu/undergrad/cse_courses/cse307.html).
 
 
-* C/C++ Programs:
+* **C/C++**:
 	* [Axiom](https://github.com/arjungmenon/Old-Projects/tree/master/Small-C%2B%2B-Projects/Axiom) (2008), an experimental interpreter to test out some new language design ideas.
 	* [Axis](https://github.com/arjungmenon/Old-Projects/tree/master/Really-Old-C-Projects/Axis) (2005-2007), a terrible interpreter with a hand-written lexer/parser combination that I developed in high school.
 	* [Sherlock Holmes](https://github.com/arjungmenon/Old-Projects/tree/master/Really-Old-C-Projects/SherlockHolmes) (2006-2007), tools for remotely monitoring and controlling Windows-based computers.

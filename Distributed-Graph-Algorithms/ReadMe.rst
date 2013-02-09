@@ -51,7 +51,7 @@ This is measure and sum of the lines of code of files containing code that were 
 | **Total**            |    817     |    1093   |
 +----------------------+------------+-----------+
 
-The short line length is an indicator of the succinctness possible with *DistAlgo*, not the general simplicity of the algorithms.
+The rather short line length is an indicator of the succinctness possible with *DistAlgo*, not the general simplicity of the algorithms.
 
 Notes on the line count
 ~~~~~~~~~~~~~~~~~~~~~~~

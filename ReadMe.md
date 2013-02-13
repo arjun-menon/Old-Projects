@@ -8,7 +8,7 @@ This is an archive of projects I've worked on in the past and am no longer activ
 
 
 * **C/C++**:
-	* [Axiom](https://github.com/arjungmenon/Old-Projects/tree/master/Small-C%2B%2B-Projects/Axiom) (2008), an partially-made experimental interpreter to test out some new language design ideas.
+	* [Axiom](https://github.com/arjungmenon/Old-Projects/tree/master/Small-C%2B%2B-Projects/Axiom) (2008), a partially-made experimental interpreter to test out some new language design ideas.
 	* [Axis](https://github.com/arjungmenon/Old-Projects/tree/master/Really-Old-C-Projects/Axis) (2005-2007), an interpreter I wrote in high school that contains a hand-written ad hoc lexer and parser. I badly wanted to create a language, and this was the result. (Not knowing that tools like [lex](http://dinosaur.compilertools.net/lex/)/[yacc](http://dinosaur.compilertools.net/yacc/index.html) existed that would have greatly eased my job.)
 	* [Sherlock Holmes](https://github.com/arjungmenon/Old-Projects/tree/master/Really-Old-C-Projects/SherlockHolmes) (2006-2007), toolkit for remotely monitoring and executing commands on Windows-based computers. It was never used, besides on my own computer (for testing purposes.)
 

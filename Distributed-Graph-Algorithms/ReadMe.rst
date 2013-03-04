@@ -27,39 +27,6 @@ NetworkX
 ~~~~~~~~
 A graph library known as `NetworkX <http://networkx.lanl.gov/>`_ was used in this project. It is a well-renown pure Python library that provides several useful features pertaining to graphs. Granted, it was a bit unnecessary for this project, but I was anticipating more use for it than was needed.
 
-Code Length
------------
-This is measure and sum of the lines of code of files containing code that were written over the course of this project:
-
-+----------------------+------------+-----------+
-| File name            |    sloc    |    all    |
-+======================+============+===========+
-| MST.dis.py           |    319     |    421    |
-+----------------------+------------+-----------+
-| MIS.dis.py           |    158     |    212    |
-+----------------------+------------+-----------+
-| BFS.dis.py           |    119     |    154    |
-+----------------------+------------+-----------+
-| ShortestPath.dis.py  |    43      |    60     |
-+----------------------+------------+-----------+
-| graph_gen.py         |    75      |    101    |
-+----------------------+------------+-----------+
-| InputGraph.dis.py    |    36      |    50     |
-+----------------------+------------+-----------+
-| tools.py             |    67      |    95     |
-+----------------------+------------+-----------+
-| **Total**            |    817     |    1093   |
-+----------------------+------------+-----------+
-
-The rather short line length is an indicator of the succinctness possible with *DistAlgo*, not the general simplicity of the algorithms.
-
-Notes on the line count
-~~~~~~~~~~~~~~~~~~~~~~~
-
-- Other files such as ``run.py`` and ``sequential_messaging_test.dis``, that were not directly relevant to project have not been listed above.
-- Two slightly different versions of ``InputGraph.py`` is used by BFS and Shortest Path to process the graph; the count is for the longer one.
-- ``tools.py`` is used by MST for non-core functionalities (like building the graph, visualizing, etc.)
-
 Other
 -----
 `Ricart-Agrawala's and Suzuki-Kasami's token-based distributed mutex algorithms <https://github.com/arjungmenon/Distributed-Graph-Algorithms/tree/master/DistributedMutex>`_ have also been been implemented in DistAlgo-0.2. In addition, `Lamport's fast mutual exclusion and bakery algorithms <https://github.com/arjungmenon/Distributed-Graph-Algorithms/tree/master/ConcurrentMutex>`_ have been implemented using the built-in Python library ``threading``.

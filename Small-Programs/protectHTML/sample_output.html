@@ -1,0 +1,19 @@
+<html>
+<head>
+<!-- for protectHTML: -->
+<script type="text/javascript" src="sjcl.js"></script>
+<script type="text/javascript" src="purl.js"></script>
+<title>
+	Sample protectHTML Encrypted Page
+</title>
+</head>
+<body>
+	<center><h2>Lorem Ipsum</h2></center>
+	<hr noshade />
+	
+<script type="text/javascript">
+try { document.write( sjcl.decrypt(purl().param('key'), '{"iv":"g29DdPefJMqChmIkWO3axg","v":1,"iter":1000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"FmJ3r47Ukmg","ct":"zIm7L7o7ilFvX72oSgbKTkI5ZF4YnglinCZd4zCcvokHV7L5X6czpbrLNbb4iPBIAdiEGrKRiP+GsfHA+4Vmu2ZYEm5kZokNI6zit9N0JXe87ClVcRKnlMIccmOy9cGmO9Amv5VAbzAtBOx4binBFWRi17Jtlrlt0+8G6nBpBP0byposH+pKOfloiNK8txFlJfMTiW3PjioZEq+qZiCd0vJIsDVALJZoBGrY5GGIwvPsPPKjJrkSWVF9X+jVMPDc5x5eR3S/QW6npBuq4IU94+cFeOrw6E6O+e32DHuTkdWBasmumZc1onv12seLyGLbCDc7DF/qBmh47bmSDyseP7DxqgQ+x/Dyz+1+KC9LET68b5dDXIGDP0b/AqO5GEtmFb3Ntp8IifD1KoR2eM31jYDo/AQCFPU13y9kbO6tIKPye78N1Oc2TFII+HPrAM9LY6NU7cyi/GwOJ8VfdjiTZiUezGY058+6S/vQxetWKyL3oRzpAobYa7iyDY0xy0IsZEB1rJfjt3VUUM7ypwkM7yO42HSHL2+h6v3qyDMBRK5ZawCoBXqYw+25ZPwM7OQJ9hTTjI9vyYuGdr3yBsL6o2gEcL8Y5CQSv1ehlG42jtvgC2Nj8Jw"}') ); } catch(err) { document.write('<form method="get">Access Denied. Password: <input type="password" name="key"> &nbsp; <input type="submit" value="Decrypt"></form>'); }
+</script>
+
+</body>
+</html>

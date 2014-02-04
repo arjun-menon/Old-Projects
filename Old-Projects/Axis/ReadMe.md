@@ -1,0 +1,3 @@
+Axis
+----
+This is an archive of an interpreter I worked on while in high school (primarily in 2005-06). It was one of my first C projects (a long one, for that matter), and it was written before I had familiarized myself with the standard approach to implementing interpeters & compilers – i.e. sepcifying a grammar, automatically generating a lexer & parser using a tool like lex/yacc/ANTLR/etc. _However_, it was thoroughly fun designing a language and implementing it, regardless of how ad-hoc the implemention might have been. I learned a lot through the experience, and I think it has left me a better programmer & engineer.

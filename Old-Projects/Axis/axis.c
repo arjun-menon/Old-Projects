@@ -1,5 +1,4 @@
 /***************************************************
-    AXIS (Advanced eXtensible Interpreter System)
    .---------------------------------------------.
    |    Program Name: AXIS CORE                  |
    |    Program Version: 1.0                     |
@@ -37,6 +36,7 @@ num32 goto_line = 0;
 byte debug_mode = 0;
 struct bools;
 struct double_list;
+struct hash_table_struct;
 /* error message when malloc() or realloc() fails */
 static const char system_no_mem[] = "Not enough memory.";
 /* ai_error is used as an error descriptor string. */
@@ -838,7 +838,7 @@ void free_prog_table()
 	prog_table_size = 0;
 }
 
-hash_table_struct * goto_table =  NULL;
+struct hash_table_struct * goto_table =  NULL;
 num32 goto_table_size = 0;
 char *future_goto = NULL;
 

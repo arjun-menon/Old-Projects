@@ -1,6 +1,6 @@
 WolfScript
 ==========
-Wolfscript is JavaScript-like language I developed as an undergraduate at [Stony Brook University](http://www.stonybrook.edu/), a class on the principles of programming languages.
+Wolfscript is JavaScript-like language I developed as an undergraduate at [Stony Brook University](http://www.stonybrook.edu/), in [a class](http://www.cs.stonybrook.edu/~liu/cse307/) on the principles of programming languages.
 
 Wolfscript typifies the modern scripting language. It supports a variety of programming language features such as array literals, strings, recursive function calls, nested function definitions, higher order functions, etc.
 

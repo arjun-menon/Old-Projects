@@ -1,10 +1,10 @@
 WolfScript
 ==========
-Wolfscript is JavaScript-like language I developed as an undergraduate at [Stony Brook University](http://www.stonybrook.edu/), in [a class](http://www.cs.stonybrook.edu/~liu/cse307/) on the principles of programming languages.
+Wolfscript is a JavaScript-like language I developed as an undergraduate at [Stony Brook University](http://www.stonybrook.edu/), in [a class](http://www.cs.stonybrook.edu/~liu/cse307/) on the principles of programming languages.
 
-Wolfscript typifies the modern scripting language. It supports a variety of programming language features such as array literals, strings, recursive function calls, nested function definitions, higher order functions, etc.
+Wolfscript typifies the modern scripting language. It supports a variety of high-level language features such as array literals, [recursive](https://en.wikipedia.org/wiki/Recursion_(computer_science)) function calls, [nested function](https://en.wikipedia.org/wiki/Nested_function) definitions, [higher order functions](https://en.wikipedia.org/wiki/Higher-order_function), etc.
 
-In Wolfscript, string and integers are passed by value, while arrays are passed by sharing. Variables are scoped dynamically (i.e., the outer scope is the scope of the caller).
+In Wolfscript, strings and integers are passed by value, while arrays are passed by reference/sharing. Variables are scoped [dynamically](https://en.wikipedia.org/wiki/Lexical_scoping#Dynamic_scoping), i.e. the outer scope is the scope of the _caller_.
 
 Here is some sample _WolfScript_ code:
 
@@ -108,4 +108,6 @@ Here is some sample _WolfScript_ code:
 
 Note
 ----
-The was one of the best classes I'd taken in college. It was taught by [Tom Rothamel](http://rothamel.us), who was an adjunct professor at the time. Tom and I have maintained a friendship outside of class, since then. Through Tom, I met [Y. Annie Liu](http://www.cs.stonybrook.edu/~liu/), my future undergraduate research adviser.
+This is one of the best classes I've taken at [Stony Brook](http://www.cs.sunysb.edu/). It was taught by [Tom Rothamel](http://rothamel.us), who was an adjunct professor at the time. Tom and I have maintained a friendship outside of class, since then.
+
+Through Tom, I met [Y. Annie Liu](http://www.cs.stonybrook.edu/~liu/), my future undergraduate research adviser.
